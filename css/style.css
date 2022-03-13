@@ -1,0 +1,355 @@
+ /* CONTAINER CLASSES */
+ .phone-container{
+    margin: auto;
+    width: max(25vw,360px);
+    height: 95vh;
+    background-color: black;
+    border-radius: 20px;
+    border: 8px solid lightslategray;
+    position: relative;
+}
+
+.phone-container p{
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+    font-size: 18px;
+}
+
+.phone-container p:hover{
+    cursor: pointer;
+}
+
+.phone-container > p:nth-child(2){
+    float: right;
+    padding-right: 5%;
+   
+}
+
+/* BOTTOM BUTTON CLASSES */
+
+.bottom-buttons{
+    position: absolute;
+    bottom: 0;
+    color: white;
+    padding-bottom: 5%;
+    text-align: center;
+    width: inherit;
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+}
+
+.bottom-buttons > i:hover{
+    cursor: pointer;
+}
+
+.screen-wrapper{
+    width: 100%;
+    height: 70vh;
+    position: relative;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+.menus{
+    z-index: -1;
+}
+
+.menus > div:hover {
+    cursor: pointer;
+}
+
+/*     GRID MENU CLASSES    */
+
+.gridMenu{
+    display: grid;
+    width: 94%;
+    height: 100vh;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(8,100px);
+    grid-gap: 10px;
+    padding : 0px 20px 0px 12px;
+    position: absolute;
+}
+
+.gridMenu .bigMenu{
+    position: relative;
+    width: 100%;
+}
+
+.gridMenu .bigMenu > i{
+    font-size: 4rem;
+}
+
+.gridMenu .bigMenu > p {
+    display: inline-block;
+    width: 90%;
+    position: absolute;
+    bottom: 0;
+    text-align: left;
+    line-height: 50%;
+    color: linen;
+}
+
+.gridMenu > div{
+    background-color: blue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s all linear;
+}
+
+.gridMenu > div > .menu-text{
+    display: none;
+}
+
+.gridMenu > div:hover{
+    transform: rotateX(180deg);
+}
+
+.gridMenu > div:active{
+    transform: scale(1.2,1.2);
+}
+
+.gridMenu > div:hover * {
+    transform:rotateX(540deg);
+}
+
+/* GRID CHILDS */
+
+.gridMenu div:first-child{
+    background-color: red;
+    grid-column: span 2;
+    grid-row: span 2;
+    
+}
+
+.gridMenu div > i {
+    font-size: 2rem;
+    color: white;
+}
+
+.gridMenu div:nth-child(6){
+    background-color: #4267B2;
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.gridMenu div:nth-child(8)
+{
+    background-color: red;
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.gridMenu div:nth-child(7){
+    background-color: green;
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.gridMenu div:nth-child(9){
+    background-color: #1DA1F2;
+}
+
+.gridMenu div:nth-child(12){
+    background-color: #db4437;
+}
+
+.gridMenu div:nth-child(15){
+    background-color: gray;
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.gridMenu div:last-child{
+    background-color: orange;
+}
+
+
+/*   FLEX MENU CLASSES   */
+
+.clickedMenu {
+    transform: scale(1,2);
+}
+
+.flexMenu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    transition: all 0.5s linear;
+}
+
+.flexMenu > div{
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    margin-left: 10%;
+    transition: transform 0.5s linear;
+}
+
+.flexMenu > div:active{
+    transform: translate(20px);
+}
+
+.flexMenu > div > i{
+    color: white;
+    margin-right: 2%;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    background-color: blue;
+    align-self: flex-start;
+}
+
+.flexMenu > div > p{
+    display: inline-block;
+    font-weight: 100;
+}
+
+/* SELECTED OPARTIONS */
+
+.selectedOperations{
+    width: 95%;
+    height: 90px;
+    position: relative;
+    background-color: white;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding-left: 20px;
+    bottom: 100%;
+    transition: transform 1s;
+}
+
+.selectedOperations > p{
+    color: black;
+    font-weight: 100;
+    margin-top: 10px;
+    display: inline-block;
+}
+
+/* LOCK SCREEN */
+
+.lockscreen {
+    width: 100%;
+    height: 70vh;
+    background-image: url("https://cdn.wallpapersafari.com/80/0/8QEPTy.jpg");
+    background-size : cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    transition: height 1s linear;
+    line-height: 0;
+}
+
+.lockscreen > p {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 40px;
+    align-self: flex-start;
+    margin-left: 5%;
+    color: white;
+}
+
+
+/* NAVICON */
+
+.navicon{
+    width: 94%;
+    display: flex;
+    justify-content: end;
+}
+
+.navicon *{
+    padding-left: 10px;
+}
+
+/*  NAVBAR  */
+
+.navbar{
+    display: none;
+    position: relative;
+    grid-template: 1fr 6fr 20px/ 100%;
+    width: 100%;
+    height: 0px;
+    background-color: black;
+    transition: height 1s linear;
+}
+
+.navbar > .toggle{
+    background-color: green;
+}
+
+.shortcuts{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    color: white;
+    margin-top: 5px;
+}
+
+.shortcuts .shortcut{
+    align-self: flex-end;
+    background-color: gray;
+    width: 30%;
+    border-right: 3px solid black;
+    
+}
+
+.shortcuts > .shortcut:nth-child(odd){
+    background-color: green;
+}
+
+.shortcuts .shortcut:hover{
+    cursor: pointer;
+}
+
+.shortcuts .shortcut > i {
+    padding-left: 10px;
+    padding-top: 5px;
+    font-size: 2rem;
+}
+
+.shortcuts .shortcut > p {
+    text-align: left;
+    font-size: 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding-left: 10px;
+}
+
+.navbar .toggle{
+    cursor: pointer;
+}
+
+/* NOTIFICATIONS */
+
+.notifications{
+    display: flex;
+    justify-content: space-between;
+}
+
+.notifications > div > i{
+    margin-right: 3px;
+}
+
+.notifications > div > *{
+    color: white;
+    font-size: 13px;
+    font-variant: small-caps;
+}
+
+.notifications div{
+    display: flex;
+    padding : 5%;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+    height: 20px;
+}
